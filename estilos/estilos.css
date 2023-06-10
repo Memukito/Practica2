@@ -1,0 +1,290 @@
+*{ /*El *siginica que se aplicara a todo el documento*/
+	margin: 0; /*Margen*/
+	padding: 0; /*Espaciado*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: "Open Sans", Arial, sans-serif; /*tipo de letra*/
+	font-size: 16px; /*Tamaño de letra por pixeles*/
+}
+
+.contenedor { /*Las classes son llamadas con un .*/	
+	width: 90%; /*Hace que la pagina se adapte al tamaño que tu deseas*/
+	max-width: 1200px; /*es para la anchura maxima, en pixeles */
+	margin: auto;
+	overflow: hidden;
+
+/*----------HEADER---------------*/
+}
+
+/*header*/
+header{
+	width: 100%;
+	background: url('../imagenes/fondocafe.jpg');
+	background-size: cover ;
+	background-attachment: fixed; 
+	background-position: center 0; /*EL 0 indica que esta pegado al borde*/
+
+}  
+
+header .contenedor{
+	position: relative;
+	height: 700px;
+}
+
+header .menu {
+	width: 100%;
+	text-align: center;
+}
+
+header {
+	width: 100%;
+	text-align: right;
+}
+
+header .menu a{
+	color: black; /*color del menu para navegar entre pestañas*/ 
+	font-size: 25px; /*tamaño de letra para ese menu*/
+	font-weight: 300;
+	display: inline-block; /*se haran pequeños bloques, teniendo cada etiqueta en linea de otra formado uno atras e otro*/
+	margin: 40px 20px;
+	text-decoration: none;
+	position: relative; /*Relativa hace que se respete el inline block*/
+}
+
+header .menu a:hover { /*es para que el apuntador del mouse sobre la etiqueta "a" se hara un efecto*/
+	text-decoration: underline;
+
+
+}
+
+header .textos{
+	width: 100%; /*La anchura en poercentajes para espetar la responsividad*/
+	color: black; /*color de la letra Cafe Universidad*/
+	position: absolute;
+	top: 50%; /*Distancia vertical en % para respetar responsividad*/
+	margin-top: -52px; /*el - me da una alineacion negativa para respetar posisicones al hacer un elmpalme*/
+}
+
+header .textos .nombre{
+	font-size: 50px;
+	font-weight: 600px;
+}
+
+header .textos .nombre span{
+	font-weight: 300px;
+}
+
+header .textos h3{
+	font-size: 25px;
+	font-style: italic;
+}
+
+/*-----MAIN----*/
+.main{
+	background: url('../imagenes/textura2.png');
+	background-repeat: repeat;
+}
+
+.main .acerca-de .contenedor{
+	overflow: visible ; /*hace que un contenido que sobrepasa las dimensiones me ayude a elegir si quiero que sea visible o no*/
+	position: relative;
+}
+
+.main .acerca-de .foto {
+	width: 80%;
+	position: absolute;
+	left: 0;
+	top: -50px;
+	z-index: 0;
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.35);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.35);
+}
+
+.main .acerca-de .foto img{
+	width: 100%;
+	vertical-align: top;
+
+}
+
+.main .acerca_de article {
+	background: white; /*color de fondo del texto acerca de*/
+	padding: 40px;
+	width: 50%;
+	position: relative;
+	/*top: 30px*/
+	top: 100px;
+	float: center; /*esta propiedad es para poner un elemento en columnas colocado hacia la derecha*/
+	z-index: 1; /*indica quien comienza en el float*/
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.35);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.35);
+
+}
+
+.main .acerca-de article h3{
+	font-size: 50px;
+	font-weight: 300;
+	margin-bottom: 40px;
+}
+
+main.acerca-de article p {
+	line-height: 28px; /*linea de contorno*/
+	margin-bottom: 15px; /*grosor de linea de contorno*/
+}
+
+.main .menu {
+	padding-top: 570px; /*espacio del texto menu de la parte de arriba*/
+	margin-bottom: 200px; /*espacio del texto menu de la parte de abajo*/
+}
+
+.main .menu .titulo {
+	font-size: 40px;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 40px;
+	color: white;
+}
+
+.main .menu .contenedor-menu {
+	border: 5px solid white; /*borde para los platillos y bebidas, donde se coloca el grosor y color. Solid es una linea recta*/
+	background: #D0BAA2; /*color del fondo*/
+	padding: 20px; /*espaciado entre el texto y el fondo*/
+	overflow: hidden; /*hace que se oculte todo lo que sobresale del contenedor*/
+}
+
+.main .menu article { /*hace que mi menu de seccion comer y bebidas se coloque en dos columnas*/
+	width: 50%;
+	float: left;
+	padding: 20px;
+}
+
+.main .menu article .categoria { /*modificacion del texto de mi menu de come y tomar solamente*/
+	font-size: 22px;
+	font-weight: 700;
+	/*color: green;*/
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.main .menu article .platillo {
+	overflow: hidden;
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	border-bottom: 4px dotted black ; /*dotted es la linea punteada que divide cada platillo y 4px el grosor*/
+}
+
+.main .menu article .nombre {
+	font-size: 20px;
+	margin-bottom: 15px;
+	float: left;
+	color: darkgreen; /*color del nombre del platillo*/
+}
+
+.main .menu article .precio {
+	float: right;
+	font-size: 20px;
+	margin-bottom: 15px;
+	color: green; /*color del precio*/
+}
+
+.main .menu article .descripcion{
+	font-size: 16px;
+	color: white; /*color de la descripcion*/
+	clear: both; /*hace que la descripcion se coloque debajo del nombre del platillo y el precio*/
+}
+
+.main .menu article .contenedor-menu2 {
+	border: 1px solid black;
+	background: white;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.main .galeria {
+	overflow: hidden;
+}
+
+.main .galeria .foto { /*coloca mis fotos en columnas de 4x4*/
+	width: 25%;
+	float: left;
+}
+
+.main .galeria .foto img { /*ajusta mis fotos a su tamaño original y se aplica una opacidad*/
+	vertical-align: top;
+	width: 100%;
+	opacity: .7;
+}
+
+.main .galeria .foto img:hover { /*al pasar el cursor por las imagenes, hace que se iluminen segun la opacidad*/ 
+	opacity: 1;
+	-webkit-transition: all .3s ease; /*el tiempo que tardara en iluminarse la imagen al pasar el cursor*/
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.main .ubicacion .titulo {
+	/*text-align: center;*/
+	font-size: 40px;
+	line-height: 40px;
+	font-weight: 300;
+	margin-bottom: 40px;
+}
+
+/*coloca mis direccion y horarios en columnas*/
+
+.main .ubicacion .direccion{ 
+	width: 50%;
+	float: left;
+	text-align: left;
+}
+
+.main .ubicacion .horarios {
+	width: 50%;
+	float: right;
+	float: right;
+}
+ /*-----------------------------------------*/
+
+ .main .ubicacion .direccion .calle {
+ 	margin-bottom: 15px;
+ }
+
+ .main .ubicacion .horarios {
+ 	overflow: hidden;
+ }
+
+ .main .ubicacion .horarios h4 {
+ 	text-align: center;
+ 	margin-bottom: 20px;
+ }
+
+ .main .ubicacion .horarios .entre-semana,
+ .main .ubicacion.horarios .fin.semana {
+ 	width: 50%;
+ 	float: left;
+ 	text-align: center;
+ }
+
+ .main .mapa {
+ 	width: 100%;
+ 	overflow: hidden;
+ }
+
+ .main .mapa iframe {
+ 	width: 100%;
+ 	max-height: 600px;
+ }
+
+ /*------FOOTER----------*/
+
+ footer { /*seccion donde se colocan las redes sociales del creador de la pagina */
+ 	background: white;
+ }
+
+ footer .copyright {
+ 	text-align: center;
+ 	padding: 15px 0;
+ 	color: black;
+ }
